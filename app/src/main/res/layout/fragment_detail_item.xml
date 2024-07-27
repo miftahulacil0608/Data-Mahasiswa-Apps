@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.DetailItemFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start_detail_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end_detail_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_detail_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/detail_data_item"
+        style="@style/TextContent.Headers"
+        android:text="@string/detail_data_item_headers"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end_detail_fragment"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start_detail_fragment"
+        app:layout_constraintTop_toTopOf="@+id/guideline_top_detail_fragment" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/username_title_detail_data"
+        style="@style/TextContent.Title"
+        android:layout_marginTop="20dp"
+        android:text="@string/username_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/detail_data_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_username"
+        style="@style/TextContent.Item"
+        android:text="@string/username_input"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_detail_fragment"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
+        app:layout_constraintTop_toBottomOf="@id/username_title_detail_data" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/nim_title_detail_data"
+        style="@style/TextContent.Title"
+        android:layout_marginTop="10dp"
+        android:text="@string/nim_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/textview_username" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_nim"
+        style="@style/TextContent.Item"
+        android:text="@string/nim_input"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_detail_fragment"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
+        app:layout_constraintTop_toBottomOf="@id/nim_title_detail_data" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/faculty_title_detail_data"
+        style="@style/TextContent.Title"
+        android:layout_marginTop="10dp"
+        android:text="@string/faculty_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/textview_nim" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_faculty"
+        style="@style/TextContent.Item"
+        android:text="@string/faculty_input"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_detail_fragment"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
+        app:layout_constraintTop_toBottomOf="@id/faculty_title_detail_data" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/major_title_detail_data"
+        style="@style/TextContent.Title"
+        android:layout_marginTop="10dp"
+        android:text="@string/major_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/textview_faculty" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_major"
+        style="@style/TextContent.Item"
+        android:text="@string/major_input"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_detail_fragment"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
+        app:layout_constraintTop_toBottomOf="@id/major_title_detail_data" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/address_title_detail_data"
+        style="@style/TextContent.Title"
+        android:layout_marginTop="10dp"
+        android:text="@string/address_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/textview_major" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_address"
+        style="@style/TextContent.Item"
+        android:text="@string/address_input"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_detail_fragment"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
+        app:layout_constraintTop_toBottomOf="@id/address_title_detail_data" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_btn_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_delete"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start_detail_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/textview_address" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/md_theme_error"
+        android:text="@string/delete_btn_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end_detail_fragment"
+        app:layout_constraintStart_toEndOf="@id/btn_edit"
+        app:layout_constraintTop_toBottomOf="@+id/textview_address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

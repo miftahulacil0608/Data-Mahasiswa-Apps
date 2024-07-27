@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.EditItemFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start_edit_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end_edit_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_edit_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/edit_data_header"
+        style="@style/TextContent.Headers"
+        android:text="@string/edit_data_headers"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_edit_fragment"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_edit_fragment"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_edit_fragment" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/username_title_edit_fragment"
+        style="@style/TextContent.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/username_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_edit_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/edit_data_header" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_input_layout_edit_fragment"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/username_title"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_edit_fragment"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start_edit_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/username_title_edit_fragment">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username_input_text__edit_fragment"
+            android:layout_width="match_parent"
+            android:text="@string/username_input"
+            android:enabled="true"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/nim_title_edit_fragment"
+        style="@style/TextContent.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/nim_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_edit_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/username_input_layout_edit_fragment" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nim_input_layout_edit_fragment"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/nim_title"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_edit_fragment"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start_edit_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/nim_title_edit_fragment">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nim_input_text_edit_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text="@string/nim_input"
+            android:enabled="false"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/faculty_title_edit_fragment"
+        style="@style/TextContent.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/faculty_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_edit_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/nim_input_layout_edit_fragment" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/faculty_input_layout_edit_fragment"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/faculty_title"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_edit_fragment"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start_edit_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/faculty_title_edit_fragment">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/faculty_input_text_edit_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/faculty_input"
+            android:enabled="false"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/major_title_edit_fragment"
+        style="@style/TextContent.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/major_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_edit_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/faculty_input_layout_edit_fragment" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/major_input_layout_edit_fragment"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/major_title"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_edit_fragment"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start_edit_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/major_title_edit_fragment">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/major_input_text_edit_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/major_input"
+            android:enabled="false"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/address_title_edit_fragment"
+        style="@style/TextContent.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/address_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_edit_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/major_input_layout_edit_fragment" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/address_input_layout_edit_fragment"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/address_title"
+        app:endIconMode="clear_text"
+
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_edit_fragment"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start_edit_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/address_title_edit_fragment">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/address_input_text_edit_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:text="@string/address_input"
+            android:enabled="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit_edit_fragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_btn_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end_edit_fragment"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start_edit_fragment"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintTop_toBottomOf="@+id/address_input_layout_edit_fragment" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Data Mahasiswa Apps</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username_title">Username</string>
+    <string name="username_input">Ahmad Miftahul Azisz</string>
+    <string name="nim_title">NIM</string>
+    <string name="nim_input">202010370311379</string>
+    <string name="faculty_title">Fakultas</string>
+    <string name="faculty_input">Teknik</string>
+    <string name="major_title">Jurusan</string>
+    <string name="major_input">Informatika</string>
+    <string name="address_title">Alamat</string>
+    <string name="address_input">Perum. Sengkaling Indah 1, Ds. Mulyoagung, Kec. Dau, Kab. Malang</string>
+    <string name="add_btn_title">Add</string>
+    <string name="submit_btn_title">Submit</string>
+    <string name="edit_btn_title">Edit</string>
+    <string name="delete_btn_title">Delete</string>
+    <string name="warning">Anda yakin ingin %s data ini?</string>
+    <string name="agree_title">Iya</string>
+    <string name="disagree_title">Tidak</string>
+    <string name="add_data_headers">Tambah Data</string>
+    <string name="detail_data_item_headers">Detail Mahasiswa</string>
+    <string name="edit_data_headers">Edit Data</string>
+</resources>

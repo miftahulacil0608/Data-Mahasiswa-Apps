@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.AddItemFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_edit_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/add_data_header"
+        style="@style/TextContent.Headers"
+        android:text="@string/add_data_headers"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_edit_fragment" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/username_title"
+        style="@style/TextContent.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/username_title"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/add_data_header" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/username_title"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/username_title">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username_input_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/nim_title"
+        style="@style/TextContent.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/nim_title"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/username_input_layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nim_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/nim_title"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/nim_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nim_input_text_edit_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/faculty_title_edit_fragment"
+        style="@style/TextContent.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/faculty_title"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/nim_input_layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/faculty_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/faculty_title"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/faculty_title_edit_fragment">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/faculty_input_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/major_title"
+        style="@style/TextContent.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/major_title"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/faculty_input_layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/major_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/major_title"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/major_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/major_input_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/address_title"
+        style="@style/TextContent.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/address_title"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/major_input_layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/address_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/address_title"
+        app:endIconMode="clear_text"
+
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/address_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/address_input_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_btn_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintTop_toBottomOf="@+id/address_input_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

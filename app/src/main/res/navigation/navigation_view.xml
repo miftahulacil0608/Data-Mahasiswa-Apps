@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_view"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.team1.datamahasiswaapps.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailItemFragment"
+            app:destination="@id/detailItemFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.team1.datamahasiswaapps.ui.fragment.AddItemFragment"
+        android:label="fragment_add_item"
+        tools:layout="@layout/fragment_add_item" />
+    <fragment
+        android:id="@+id/detailItemFragment"
+        android:name="com.team1.datamahasiswaapps.ui.fragment.DetailItemFragment"
+        android:label="fragment_detail_item"
+        tools:layout="@layout/fragment_detail_item" >
+        <action
+            android:id="@+id/action_detailItemFragment_to_editItemFragment"
+            app:destination="@id/editItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editItemFragment"
+        android:name="com.team1.datamahasiswaapps.ui.fragment.EditItemFragment"
+        android:label="fragment_edit_item"
+        tools:layout="@layout/fragment_edit_item" />
+</navigation>
