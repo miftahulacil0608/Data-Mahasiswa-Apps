@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.team1.datamahasiswaapps.R
 import com.team1.datamahasiswaapps.common.KEY_BUNDLE_TO_EDIT
+import com.team1.datamahasiswaapps.common.utils.Validator
 import com.team1.datamahasiswaapps.databinding.FragmentEditItemBinding
 import com.team1.datamahasiswaapps.domain.model.Students
 import com.team1.datamahasiswaapps.ui.viewmodel.EditFragmentViewModel
@@ -52,15 +53,48 @@ class EditItemFragment : Fragment() {
 
 
     }
-    private fun updateButtonClicked(id: Int){
-        binding.btnSubmitEditFragment.setOnClickListener {
-            val username = binding.usernameInputTextEditFragment.text.toString()
-            val address = binding.addressInputTextEditFragment.text.toString()
 
-            viewModelEditItemFragment.updateStudentsData(newUsername = username, newAddress = address, id=id).also {
-                Log.d("EditFragment", "updateButtonClicked: $username")
-                findNavController().popBackStack(R.id.homeFragment,false)
+    private fun updateButtonClicked(id: Int) {
+        binding.btnSubmitEditFragment.setOnClickListener {
+            if (validateInput()) {
+
+
+                val username = binding.usernameInputTextEditFragment.text.toString()
+                val address = binding.addressInputTextEditFragment.text.toString()
+
+                viewModelEditItemFragment.updateStudentsData(
+                    newUsername = username,
+                    newAddress = address,
+                    id = id
+                ).also {
+                    Log.d("EditFragment", "updateButtonClicked: $username")
+                    findNavController().popBackStack(R.id.homeFragment, false)
+                }
             }
         }
+    }
+
+    private fun validateInput(): Boolean {
+        var isValid = true
+
+        val username = binding.usernameInputTextEditFragment.text.toString()
+        val address = binding.addressInputTextEditFragment.text.toString()
+
+
+        if (!Validator.isNotEmpty(username) || !Validator.isNameValid(username)) {
+            binding.usernameInputTextEditFragment.error = "Nama harus minimal 3 huruf"
+            isValid = false
+        } else {
+            binding.usernameInputTextEditFragment.error = null
+        }
+
+        if (!Validator.isNotEmpty(address) || !Validator.isAddressValid(address)) {
+            binding.addressInputTextEditFragment.error = "Alamat harus minimal 20 huruf"
+            isValid = false
+        } else {
+            binding.addressInputTextEditFragment.error = null
+        }
+
+        return isValid
     }
 }

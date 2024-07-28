@@ -52,6 +52,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/username_title"
         app:endIconMode="clear_text"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/username_title">
@@ -79,6 +80,8 @@
         android:layout_height="wrap_content"
         android:hint="@string/nim_title"
         app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:counterMaxLength="12"
         app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/nim_title">
@@ -88,6 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
+            android:maxLength="12"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -108,6 +112,8 @@
         android:layout_height="wrap_content"
         android:hint="@string/faculty_title"
         app:endIconMode="clear_text"
+        app:errorEnabled="true"
+
         app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/faculty_title">
@@ -136,6 +142,8 @@
         android:layout_height="wrap_content"
         android:hint="@string/major_title"
         app:endIconMode="clear_text"
+        app:errorEnabled="true"
+
         app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/major_title">
@@ -165,6 +173,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/address_title"
         app:endIconMode="clear_text"
+        app:errorEnabled="true"
 
         app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
