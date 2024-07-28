@@ -104,7 +104,9 @@ class DetailItemFragment : Fragment() {
     private fun buttonDeletedClicked(students: Students) {
         binding.btnDelete.setOnClickListener {
             viewModelDetailItemFragment.deletedStudentsData(students).also {
+                Snackbar.make(requireContext(),binding.root,"Data Berhasil Dihapus",Snackbar.LENGTH_SHORT).show()
                 findNavController().navigateUp()
+
             }
         }
     }

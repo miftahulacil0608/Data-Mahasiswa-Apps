@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.team1.datamahasiswaapps.R
 import com.team1.datamahasiswaapps.common.KEY_BUNDLE_TO_EDIT
 import com.team1.datamahasiswaapps.common.utils.Validator
@@ -57,8 +58,6 @@ class EditItemFragment : Fragment() {
     private fun updateButtonClicked(id: Int) {
         binding.btnSubmitEditFragment.setOnClickListener {
             if (validateInput()) {
-
-
                 val username = binding.usernameInputTextEditFragment.text.toString()
                 val address = binding.addressInputTextEditFragment.text.toString()
 
@@ -68,6 +67,8 @@ class EditItemFragment : Fragment() {
                     id = id
                 ).also {
                     Log.d("EditFragment", "updateButtonClicked: $username")
+                    Snackbar.make(requireContext(),binding.root,"Data Berhasil Diperbarui", Snackbar.LENGTH_SHORT).show()
+
                     findNavController().popBackStack(R.id.homeFragment, false)
                 }
             }
