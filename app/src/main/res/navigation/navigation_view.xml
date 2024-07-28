@@ -35,5 +35,9 @@
         android:id="@+id/editItemFragment"
         android:name="com.team1.datamahasiswaapps.ui.fragment.EditItemFragment"
         android:label="fragment_edit_item"
-        tools:layout="@layout/fragment_edit_item" />
+        tools:layout="@layout/fragment_edit_item" >
+        <argument
+            android:name="dataStudents"
+            app:argType="com.team1.datamahasiswaapps.domain.model.Students" />
+    </fragment>
 </navigation>

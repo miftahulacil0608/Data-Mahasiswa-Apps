@@ -46,7 +46,7 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textview_username"
         style="@style/TextContent.Item"
-        android:text="@string/username_input"
+        android:hint="@string/username_input"
         app:layout_constraintEnd_toEndOf="@id/guideline_end_detail_fragment"
         app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
         app:layout_constraintTop_toBottomOf="@id/username_title_detail_data" />
@@ -62,7 +62,7 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textview_nim"
         style="@style/TextContent.Item"
-        android:text="@string/nim_input"
+        android:hint="@string/nim_input"
         app:layout_constraintEnd_toEndOf="@id/guideline_end_detail_fragment"
         app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
         app:layout_constraintTop_toBottomOf="@id/nim_title_detail_data" />
@@ -78,7 +78,7 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textview_faculty"
         style="@style/TextContent.Item"
-        android:text="@string/faculty_input"
+        android:hint="@string/faculty_input"
         app:layout_constraintEnd_toEndOf="@id/guideline_end_detail_fragment"
         app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
         app:layout_constraintTop_toBottomOf="@id/faculty_title_detail_data" />
@@ -94,7 +94,7 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textview_major"
         style="@style/TextContent.Item"
-        android:text="@string/major_input"
+        android:hint="@string/major_input"
         app:layout_constraintEnd_toEndOf="@id/guideline_end_detail_fragment"
         app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
         app:layout_constraintTop_toBottomOf="@id/major_title_detail_data" />
@@ -110,11 +110,20 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textview_address"
         style="@style/TextContent.Item"
-        android:text="@string/address_input"
+        android:hint="@string/address_input"
         app:layout_constraintEnd_toEndOf="@id/guideline_end_detail_fragment"
         app:layout_constraintStart_toStartOf="@id/guideline_start_detail_fragment"
         app:layout_constraintTop_toBottomOf="@id/address_title_detail_data" />
 
+    <ProgressBar
+        android:id="@+id/progressbar_detail_data_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end_detail_fragment"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start_detail_fragment"
+        app:layout_constraintTop_toTopOf="parent" />
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_edit"
         android:layout_width="wrap_content"

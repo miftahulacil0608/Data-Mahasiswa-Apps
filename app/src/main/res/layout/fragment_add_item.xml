@@ -84,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nim_title">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nim_input_text_edit_fragment"
+            android:id="@+id/nim_input_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
@@ -92,7 +92,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/faculty_title_edit_fragment"
+        android:id="@+id/faculty_title"
         style="@style/TextContent.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/faculty_title_edit_fragment">
+        app:layout_constraintTop_toBottomOf="@+id/faculty_title">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/faculty_input_text"

@@ -80,9 +80,9 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
 
     //koin
-    /*implementation(libs.koin.bom)
+    implementation(platform(libs.koin.bom))
     implementation(libs.koin.core)
-    implementation(libs.koin.android)*/
+    implementation(libs.koin.android)
 
 
 

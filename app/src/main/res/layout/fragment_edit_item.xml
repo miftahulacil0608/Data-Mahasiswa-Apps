@@ -58,7 +58,6 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/username_input_text__edit_fragment"
             android:layout_width="match_parent"
-            android:text="@string/username_input"
             android:enabled="true"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -90,7 +89,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:text="@string/nim_input"
             android:enabled="false"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -120,7 +118,6 @@
             android:id="@+id/faculty_input_text_edit_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/faculty_input"
             android:enabled="false"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -150,7 +147,6 @@
             android:id="@+id/major_input_text_edit_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/major_input"
             android:enabled="false"
             />
 
@@ -183,7 +179,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
-            android:text="@string/address_input"
             android:enabled="true"
             />
     </com.google.android.material.textfield.TextInputLayout>
